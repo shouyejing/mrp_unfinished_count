@@ -9,6 +9,6 @@ class MO(models.Model):
 
     @api.depends("move_created_ids", "move_created_ids2")
     def _compute_unfinished_count(self):
-        total = sum(map(lambda x= x.product_uom_qty, self.move_created_ids))
-        self.finished_count = sum(map(lambda x= x.product_uom_qty, self.move_created_ids2))
+        total = sum(map(lambda x: x.product_uom_qty, self.move_created_ids))
+        self.finished_count = sum(map(lambda x: x.product_uom_qty, self.move_created_ids2))
         self.unfinished_count = total-self.finished_count
