@@ -1,9 +1,8 @@
-__author__ = 'wangting'
 {
     'name': "Manufacure Order Unfinished Count",
     'version': '1.0',
     'depends': ['mrp'],
-    'author': "wangting",
+    'author': "wangting,jason",
     'category': 'custom',
     'data': [
 
