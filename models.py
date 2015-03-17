@@ -10,5 +10,5 @@ class MO(models.Model):
 
     @api.depends("move_created_ids", "move_created_ids2")
     def _compute_unfinished_quantity(self):
-        self.unfinished_quantity = sum(map(lambda x: x.product_uom_qty, self.move_created_ids))
+        self.unfinished_quantity = sum(x.product_uom_qty for x in self.move_created_ids)
         self.finished_quantity = sum(map(lambda x: x.product_uom_qty, self.move_created_ids2))

@@ -9,6 +9,8 @@
     ],
     'application': True,
     'description': """
-        Manufacure Order Unfinished Count.
+Manufacure Order Unfinished Count.
+
+*v1.0*
     """
 }
